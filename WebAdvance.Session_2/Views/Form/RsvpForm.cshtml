@@ -1,0 +1,65 @@
+﻿@model WebAdvance.Session_2.Models.GuestRespone
+
+
+@{
+    ViewBag.Title = "RsvpForm";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RsvpForm</title>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+
+        <div class="form-horizontal">
+
+            <h3>RsvpForm</h3>
+            <br />
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(m => m.Name, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(m => m.Email, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Phone, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(m => m.Phone, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.willAttend, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(m => m.willAttend, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-2">
+                    <input type="submit" value="Register" class="btn btn-default" />
+                </div>
+            </div>
+
+        </div>
+    }
+
+    <div>
+        @Html.ActionLink("Go Back", "Form")
+    </div>
+</body>
+</html>
+

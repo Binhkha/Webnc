@@ -1,0 +1,45 @@
+﻿@model WebAdvance.Session_2.Models.GuestRespone
+
+@{
+    ViewBag.Title = "Thanks";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Thanks</title>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+</head>
+<body>
+
+    <div>
+        @if (Model.willAttend == null)
+        {
+            <h2>You need to fulfill table</h2>
+            @Html.ActionLink("Go Back to Complete it", "RsvpForm")
+        }
+        else if ((bool)Model.willAttend)
+        {
+            if (Model.Name == null || Model.Phone == null || Model.Email == null)
+            {
+                <h2>Please input your full info</h2>
+                @Html.ActionLink("Go Back To Input", "RsvpForm")
+            }
+            else
+            {
+                <h2>Welcome @Model.Name</h2>
+            }
+        }
+        else
+        {
+            <h2>Sorry Buddy!!!</h2>
+        }
+
+
+    </div>
+</body>
+</html>
+
+
+
