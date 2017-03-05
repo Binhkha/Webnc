@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@section scripts{
+    <script>
+        $(function () {
+            $("#fileupload").change(function () {
+                var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.gif|.png|.bmp)$/;
+                if (regex.test($(this).val().toLowerCase())) {
+                    if (typeof (FileReader) != "undefined") {
+                        var reader = new FileReader();
+                        reader.onload = function (e) {
+                            $("#dvpreview1").attr("src", e.target.result);
+                        }
+                        reader.readAsDataURL($(this)[0].files[0]);
+                    }
+                    else {
+                        alert("This browser does not support FileReader");
+                    }
+                }
+                else {
+                    alert("Please upload a valid image file.");
+                }
+            });
+        });
+    </script>
+}1
+
+
+
+<h2>Staff Information</h2>
+<form method="post" name="f1" action="/Staff/Save" enctype="multipart/form-data">
+    Staff id: <br /><input type="text" value="@ViewBag.id" name="txtID" /> <br />
+    Staff Name: <br /> <input type="text" name="txtName" value="@ViewBag.name" /> <br />
+    Date of Birth: <br /> <input type="date" name="txtDate" value="@ViewBag.birthday" /> <br />
+    Salary: <br /> <input type="text" name="txtSalary" value="@ViewBag.salary" /> <br />
+    Image: <div>
+        <br /> <input type="file" name="MyFileImage" id="fileupload" class="fileupload1" /> <hr />
+        <i>Preview</i> <br />
+        <img src="@ViewBag.staffimage" id="dvpreview1" />
+    </div>
+    <input type="submit" value="Save" />
+    <input type="button" value="Open" onclick="localtion.href = '@Url.Action("Open", "Staff")'" />
+
+</form>
