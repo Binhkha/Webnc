@@ -13,31 +13,34 @@
 </head>
 <body>
 
+    <h2>@ViewBag.messageresult</h2>
+
     <div>
-        @if (Model.willAttend == null)
-        {
-            <h2>You need to fulfill table</h2>
-            @Html.ActionLink("Go Back to Complete it", "RsvpForm")
-        }
-        else if ((bool)Model.willAttend)
-        {
-            if (Model.Name == null || Model.Phone == null || Model.Email == null)
+        @*@if (Model.willAttend == null)
             {
-                <h2>Please input your full info</h2>
-                @Html.ActionLink("Go Back To Input", "RsvpForm")
+                <h2>You need to fulfill table</h2>
+                @Html.ActionLink("Go Back to Complete it", "RsvpForm")
+            }
+            else if ((bool)Model.willAttend)
+            {
+                if (Model.Name == null || Model.Phone == null || Model.Email == null)
+                {
+                    <h2>Please input your full info</h2>
+                    @Html.ActionLink("Go Back To Input", "RsvpForm")
+                }
+                else
+                {
+                    <h2>Welcome @Model.Name</h2>
+                }
             }
             else
             {
-                <h2>Welcome @Model.Name</h2>
-            }
-        }
-        else
-        {
-            <h2>Sorry Buddy!!!</h2>
-        }
+                <h2>Sorry Buddy!!!</h2>
+            }*@
 
 
     </div>
+
 </body>
 </html>
 

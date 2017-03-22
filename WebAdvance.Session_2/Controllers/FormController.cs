@@ -23,8 +23,31 @@ namespace WebAdvance.Session_2.Controllers
         [HttpPost]
         public ActionResult RsvpForm(GuestRespone response)
         {
-            return View("Thanks", response);
-
+            if (response.willAttend == null)
+            {
+                ViewBag.messageresult = "You need to fulfill table".ToUpper();
+                //@Html.ActionLink("Go Back to Complete it", "RsvpForm")
+                return View("RsvpForm");
+            }
+            else if ((bool)response.willAttend)
+            {
+                if (response.Name == null || response.Phone == null || response.Email == null)
+                {
+                    ViewBag.messageresult = "Please input your full info".ToUpper();
+                    //@Html.ActionLink("Go Back To Input", "RsvpForm")
+                    return View("RsvpForm");
+                }
+                else
+                {
+                    ViewBag.messageresult = "Welcome " + response.Name.ToUpper();
+                    return View("Thanks");
+                }
+            }
+            else
+            {
+                ViewBag.messageresult = "Sorry Buddy!!!".ToUpper();
+            }
+            return View("RsvpForm");
         }
     }
 }
