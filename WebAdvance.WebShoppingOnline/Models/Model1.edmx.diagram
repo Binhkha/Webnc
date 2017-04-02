@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="effb34072e2148abbb5e7c0aafb3f57e" Name="Diagram1">
+        <EntityTypeShape EntityType="NorthwindCopyModel.Account" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindCopyModel.Category" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindCopyModel.Customer" Width="1.5" PointX="0.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindCopyModel.Feedback" Width="1.875" PointX="3.375" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindCopyModel.Order_Detail" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindCopyModel.Order" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindCopyModel.Product" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindCopyModel.Supplier" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <AssociationConnector Association="NorthwindCopyModel.FK__Products__Catego__32E0915F" ManuallyRouted="false" />
+        <AssociationConnector Association="NorthwindCopyModel.FK__Feedback__Custom__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="NorthwindCopyModel.FK__Orders__Customer__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="NorthwindCopyModel.FK__Order_Det__Order__35BCFE0A" ManuallyRouted="false" />
+        <AssociationConnector Association="NorthwindCopyModel.FK__Order_Det__Produ__36B12243" ManuallyRouted="false" />
+        <AssociationConnector Association="NorthwindCopyModel.FK__Products__Suppli__33D4B598" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

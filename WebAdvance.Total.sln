@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAdvance.Session_Assignme
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAdvanced.Session_5", "WebAdvanced.Session_5\WebAdvanced.Session_5.csproj", "{F030EA0D-246D-4DE1-BAAD-8D8A45477B6A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAdvance.WebShoppingOnline", "WebAdvance.WebShoppingOnline\WebAdvance.WebShoppingOnline.csproj", "{F83358B2-D422-41B7-B924-98096946B1E3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{F030EA0D-246D-4DE1-BAAD-8D8A45477B6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F030EA0D-246D-4DE1-BAAD-8D8A45477B6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F030EA0D-246D-4DE1-BAAD-8D8A45477B6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F83358B2-D422-41B7-B924-98096946B1E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F83358B2-D422-41B7-B924-98096946B1E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F83358B2-D422-41B7-B924-98096946B1E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F83358B2-D422-41B7-B924-98096946B1E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
